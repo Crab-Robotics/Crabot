@@ -1,0 +1,7 @@
+#!/usr/bin/env pybricks-micropython
+
+from pybricks.hubs import EV3Brick
+
+ev3 = EV3Brick()
+ev3.speaker.beep(frequency=130.81, duration=500)
+ev3.speaker.beep(frequency=110.0, duration=500)
