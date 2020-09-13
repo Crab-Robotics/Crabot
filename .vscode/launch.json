@@ -5,7 +5,14 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Download and Run",
+			"name": "Gyro",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/gyro.py",
+			"interactiveTerminal": false
+		},
+		{
+			"name": "Main",
 			"type": "ev3devBrowser",
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/main.py",
