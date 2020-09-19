@@ -17,6 +17,5 @@ crabot = CrabRobotLibrary.Robot("Crabot","Happy")
 crabot.tell_me_about_yourself()
 
 crabot.gyro_reset()
-crabot.gyro_turn(90, Direction.CLOCKWISE)
-crabot.gyro_turn(180, Direction.CLOCKWISE)
-crabot.gyro_turn(350, Direction.CLOCKWISE)
+crabot.gyro_drive(150, 0, 1000)
+wait(20000)

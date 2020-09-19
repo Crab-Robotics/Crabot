@@ -62,6 +62,15 @@ class Robot:
 		self.right_wheel.stop(Stop.BRAKE)
 		print("stop:  " + str(self.gyro.angle()))
 
+	def gyro_drive(self, speed, heading, distance):
+		self.robot.reset()
+		actual_distance = 0
+		while actual_distance < distance:
+			correction = self.gyro.angle() * -10
+			self.robot.drive(speed, correction)
+			wait(10)
+			actual_distance = self.robot.distance()
+
 	def beep(self, number_of_beeps):
 		print("Beep",number_of_beeps,"times.")
 		x = 1
