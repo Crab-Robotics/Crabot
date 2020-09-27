@@ -17,6 +17,14 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/main.py",
 			"interactiveTerminal": false
+		},
+		{
+			"name": "Uber",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/uber.py",
+			"interactiveTerminal": false
 		}
+	
 	]
 }
