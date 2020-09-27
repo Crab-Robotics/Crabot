@@ -8,7 +8,7 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
-def mission1():
+#def mission1():
 	# do mission 1
 	# gyro-drive and stuff
 	# mission 1 is complete
