@@ -9,6 +9,7 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
 import RichardSkillsLibrary
+import GreydenSkillsLibrary
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
@@ -18,6 +19,9 @@ Crabot.tell_me_about_yourself()
 
 SkillBot = RichardSkillsLibrary.Richard_Skills(Crabot)
 SkillBot.tell_me_about_your_skills()
+
+GreydenSkillBot = GreydenSkillsLibrary.Greyden_Skills(Crabot)
+GreydenSkillBot.tell_me_about_your_skills()
 
 Crabot.move_forward(950)
 Crabot.turn(90)
