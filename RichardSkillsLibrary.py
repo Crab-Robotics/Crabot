@@ -7,11 +7,18 @@ from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
+import CrabRobotLibrary
+
 
 # Define Class Robot
 class Richard_Skills:
+
+    color_sensor_left = ColorSensor(Port.S3)
+    color_sensor_right = ColorSensor(Port.S4)
+
     def __init__(self, robot):
         self.robot = robot
+        
 
     def tell_me_about_your_skills(self):
         print("SKILLS - I can Dance, Wiggle, Big Wiggle, and Shuffle")
@@ -48,3 +55,6 @@ class Richard_Skills:
             self.robot.turn(45)
             self.robot.turn(-15)
             b = b + 1
+    
+    def detect_color(self):
+        print("I can see left",self.color_sensor_left.color()," and right", self.color_sensor_right.color(),".")
