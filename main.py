@@ -32,6 +32,7 @@ SkillBot.dance(1)
 SkillBot.wiggle(1)
 SkillBot.shuffle(1)
 SkillBot.wiggle(1)
+SkillBot.detect_color()
 print()
 
 print('I love dancing')
