@@ -13,8 +13,8 @@ import CrabRobotLibrary
 # Define Class Robot
 class Richard_Skills:
 
-    color_sensor_left = ColorSensor(Port.S3)
-    color_sensor_right = ColorSensor(Port.S4)
+    #color_sensor_left = ColorSensor(Port.S3)
+    #color_sensor_right = ColorSensor(Port.S4)
 
     def __init__(self, robot):
         self.robot = robot
