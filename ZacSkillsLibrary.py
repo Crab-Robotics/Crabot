@@ -33,24 +33,26 @@ class Zac_Skills:
         y = 1 
         while y <= number_of_steps: 
             self.robot.forward(25) 
-            y = y + 1 def follow(self, number_of_seconds): 
-            print('SKILLS - Follow the line for', number_of_seconds,'seconds') 
-            y = 1 while y <= number_of_seconds: 
-            left_motor = Motor(Port.A) 
-            right_motor = Motor(Port.D) 
+            y = y + 1 
             
-            color_sensor_left = ColorSensor(Port.S3) 
-            color_sensor_right = ColorSensor(Port.S4) 
+    def follow(self, number_of_seconds): 
+        print('SKILLS - Follow the line for', number_of_seconds,'seconds') 
+        y = 1 while y <= number_of_seconds: 
+        left_motor = Motor(Port.A) 
+        right_motor = Motor(Port.D) 
             
-            robot = DriveBase(left_motor, right_motor, wheel_diameteR, axle_track) 
-            BLACK = 9 
-            WHITE = 85 
+        color_sensor_left = ColorSensor(Port.S3) 
+        color_sensor_right = ColorSensor(Port.S4) 
             
-            threshold = (BLACK + WHITE) / 2 
+        robot = DriveBase(left_motor, right_motor, wheel_diameteR, axle_track) 
+        BLACK = 9 
+        WHITE = 85 
             
-            DRIVE_SPEED = 100 PROPORTIONAL_GAIN = 1.2 
+        threshold = (BLACK + WHITE) / 2 
             
-            while True: deviation = line_sensor.reflection() - threshold
+        DRIVE_SPEED = 100 PROPORTIONAL_GAIN = 1.2 
+            
+        while True: deviation = line_sensor.reflection() - threshold
             turn_rate = PROPORTIONAL_GAIN * deviation 
             robot.drive(DRIVE_SPEED, turn_rate)
             wait(10)
