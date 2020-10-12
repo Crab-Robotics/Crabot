@@ -12,7 +12,7 @@ import RichardSkillsLibrary
 import GreydenSkillsLibrary
 import KateSkillsLibrary
 import ZacSkillsLibrary
-import CalebSkillsLibrary
+import Caleb_Skills_Library
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
@@ -32,7 +32,7 @@ KateSkillBot.tell_me_about_your_skills()
 ZacSkillBot = ZacSkillsLibrary.Zac_Skills(Crabot)
 ZacSkillBot.tell_me_about_your_skills()
 
-CalebSkillBot = CalebSkillsLibrary.Caleb_Skills(Crabot)
+CalebSkillBot = Caleb_Skills_Library.Caleb_Skills(Crabot)
 CalebSkillBot.tell_me_about_your_skills()
 
 Crabot.move_forward(950)
