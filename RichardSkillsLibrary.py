@@ -12,8 +12,7 @@ import CrabRobotLibrary
 
 # Define Class Robot
 class Richard_Skills:
-
-    ultrasonic_sensor = UltrasonicSensor(Port.S1)
+    
     color_sensor_left = ColorSensor(Port.S3)
     color_sensor_right = ColorSensor(Port.S4)
 
@@ -61,6 +60,7 @@ class Richard_Skills:
         print("I can see left",self.color_sensor_left.color()," and right", self.color_sensor_right.color(),".")
 
     def detect_wall(self, distance_mm, angle_turn):
+        ultrasonic_sensor = UltrasonicSensor(Port.S1)
         print("If I get too close to the wall, I will turn.")
         if self.ultrasonic_sensor.distance() <= distance_mm:
             print("Too close!")
