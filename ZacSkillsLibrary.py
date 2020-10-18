@@ -1,12 +1,12 @@
 #!/usr/bin/env pybricks-micropython 
-from pybricks.hubs import EV3Brick 
-from pybricks.ev3devices 
-import (Motor, TouchSensor, ColorSensor, InfraredSensor, UltrasonicSensor, GyroSensor) 
-from pybricks.parameters import Port, Stop, Direction, Button, Color 
-from pybricks.tools import wait, StopWatch, DataLog 
-from pybricks.robotics import DriveBase 
-from pybricks.media.ev3dev import SoundFile, ImageFile 
-import CrabRobotLibrary 
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
+                                 InfraredSensor, UltrasonicSensor, GyroSensor)
+from pybricks.parameters import Port, Stop, Direction, Button, Color
+from pybricks.tools import wait, StopWatch, DataLog
+from pybricks.robotics import DriveBase
+from pybricks.media.ev3dev import SoundFile, ImageFile
+import CrabRobotLibrary
 #define class robot 
  
 class Zac_Skills: 
@@ -19,7 +19,8 @@ class Zac_Skills:
         
     def dance(self, number_of_dances): 
         print("SKILLS - Perform", number_of_dances,"dance moves.") 
-        y = 1 while y <= number_of_dances: 
+        y = 1 
+        while y <= number_of_dances: 
             self.robot.forward(2) 
             self.robot.backword(2) 
             self.robot.turn(270) 
@@ -37,9 +38,10 @@ class Zac_Skills:
             
     def follow(self, number_of_seconds): 
         print('SKILLS - Follow the line for', number_of_seconds,'seconds') 
-        y = 1 while y <= number_of_seconds: 
-        left_motor = Motor(Port.A) 
-        right_motor = Motor(Port.D) 
+        y = 1 
+        while y <= number_of_seconds: 
+            left_motor = Motor(Port.A) 
+            right_motor = Motor(Port.D) 
             
         color_sensor_left = ColorSensor(Port.S3) 
         color_sensor_right = ColorSensor(Port.S4) 
@@ -50,9 +52,11 @@ class Zac_Skills:
             
         threshold = (BLACK + WHITE) / 2 
             
-        DRIVE_SPEED = 100 PROPORTIONAL_GAIN = 1.2 
+        DRIVE_SPEED = 100 
+        PROPORTIONAL_GAIN = 1.2 
             
-        while True: deviation = line_sensor.reflection() - threshold
+        while True: 
+            deviation = line_sensor.reflection() - threshold
             turn_rate = PROPORTIONAL_GAIN * deviation 
             robot.drive(DRIVE_SPEED, turn_rate)
             wait(10)
