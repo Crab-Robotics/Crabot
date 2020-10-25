@@ -4,6 +4,7 @@
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
+
 		{
 			"name": "Gyro",
 			"type": "ev3devBrowser",
@@ -16,6 +17,13 @@
 			"type": "ev3devBrowser",
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/main.py",
+			"interactiveTerminal": false
+		},
+		{
+			"name": "CrabRobotLibrary",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/CrabRobotLibrary.py",
 			"interactiveTerminal": false
 		},
 		{
