@@ -67,3 +67,20 @@ class Richard_Skills:
             self.robot.turn(angle_turn) 
         else:
             print("There is some room...")
+
+    def richards_uber(self):
+        while True:
+            button = EV3Brick.buttons.pressed()
+            if Button.CENTER in button:
+                break
+            elif Button.LEFT in button:
+                print("Hello, Friend!")
+            elif Button.RIGHT in button:
+                print("Goodbye.")
+            elif Button.UP in button:
+                print("I love PYTHON!")
+            elif Button.DOWN in button:
+                print("REMEMBER: Update me in Github!")
+
+
+        

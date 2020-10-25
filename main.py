@@ -45,6 +45,7 @@ SkillBot.wiggle(1)
 SkillBot.shuffle(1)
 SkillBot.wiggle(1)
 SkillBot.detect_color()
+SkillBot.richards_uber()
 print()
 
 print('I love dancing')
