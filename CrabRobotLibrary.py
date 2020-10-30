@@ -82,3 +82,7 @@ class Robot:
 	def move_backwards(self, distance_mm):
 		print("Move backwards",distance_mm,".")
 		self.robot.straight(distance_mm)
+
+if __name__ == '__main__':
+	Crabot = Robot("Crabot Test","Testy")
+	Crabot.tell_me_about_yourself()

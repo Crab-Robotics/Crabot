@@ -20,6 +20,13 @@
 			"interactiveTerminal": false
 		},
 		{
+			"name": "CrabRobotLibrary",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/CrabRobotLibrary.py",
+			"interactiveTerminal": false
+		},
+		{
 			"name": "Uber",
 			"type": "ev3devBrowser",
 			"request": "launch",
