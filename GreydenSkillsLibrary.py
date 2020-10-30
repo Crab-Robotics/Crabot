@@ -12,8 +12,24 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 class Greyden_Skills:
 	def __init__(self, robot):
 		self.robot = robot
+		try:
+			self.gyro = GyroSensor(Port.S2, Direction.CLOCKWISE)
+		except:
+			self.gyro = None
+			print("No Gyro Sensor plugged into Port 2. Cannot run Greyden's Skills. :-(")
+			print()
+	
+	def gyro_angle(self):
+		if self.gyro is None:
+			return float("nan")
+		else:
+			return self.gyro.angle()
 
 	def tell_me_about_your_skills(self):
 		print("SKILLS - I can read the Gyro Sensor!")
-		print("SKILLS - I am able to show you the Gyro angle, see",self.robot.gyro.angle())
+		print("SKILLS - I am able to show you the Gyro angle, see",self.gyro_angle())
 		print()
+
+if __name__ == '__main__':
+	GreydenSkillBot = Greyden_Skills(None)
+	GreydenSkillBot.tell_me_about_your_skills()
