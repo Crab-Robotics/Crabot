@@ -60,3 +60,36 @@ class Zac_Skills:
             turn_rate = PROPORTIONAL_GAIN * deviation 
             robot.drive(DRIVE_SPEED, turn_rate)
             wait(10)
+
+     def sing(self, number_of_songs_played):
+        print('SKILLS - Listen to the for', number_of_songs_played,'times')
+        y = 1
+        while y <= number_of_songs_played:
+            ev3.speaker.beep(frequency=329.63, duration=500)
+            ev3.speaker.beep(frequency=440, duration=500)
+            ev3.speaker.beep(frequency=659.25, duration=500)
+            ev3.speaker.beep(frequency=392, duration=500)
+            ev3.speaker.beep(frequency=659.25, duration=500)
+            ev3.speaker.beep(frequency=440, duration=500)
+            ev3.speaker.beep(frequency=369.99, duration=500)
+            ev3.speaker.beep(frequency=440, duration=500)
+            ev3.speaker.beep(frequency=659.25, duration=500)
+            ev3.speaker.beep(frequency=349.23, duration=500)
+            ev3.speaker.beep(frequency=587.33, duration=250)
+            ev3.speaker.beep(frequency=554.37, duration=250)
+            ev3.speaker.beep(frequency=440, duration=500)
+            i += 1
+
+            ev3.speaker.beep(frequency=329.63, duration=500)
+            ev3.speaker.beep(frequency=440, duration=500)
+            ev3.speaker.beep(frequency=659.25, duration=500)
+            ev3.speaker.beep(frequency=392, duration=500)
+            ev3.speaker.beep(frequency=659.25, duration=500)
+            ev3.speaker.beep(frequency=440, duration=500)
+            ev3.speaker.beep(frequency=369.99, duration=500)
+            ev3.speaker.beep(frequency=440, duration=500)
+            ev3.speaker.beep(frequency=659.25, duration=500)
+            ev3.speaker.beep(frequency=349.23, duration=500)
+            ev3.speaker.beep(frequency=261.63, duration=500)
+            ev3.speaker.beep(frequency=349.23, duration=500)
+            ev3.speaker.beep(frequency=261.63, duration=750)
