@@ -56,11 +56,6 @@ while True:
     else:
         wait(10)
 
-Crabot.move_forward(950)
-Crabot.turn(90)
-Crabot.move_forward(400)
-Crabot.turn(45)
-Crabot.move_forward(390)
 print()
 
 print('I love dancing')
