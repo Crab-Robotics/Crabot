@@ -5,6 +5,7 @@
 	"version": "0.2.0",
 	"configurations": [
 
+
 		{
 			"name": "Gyro",
 			"type": "ev3devBrowser",
@@ -38,6 +39,13 @@
 			"type": "ev3devBrowser",
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/GreydenSkillsLibrary.py",
+			"interactiveTerminal": false
+		},
+		{
+			"name": "Run Cheese",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/run_cheese.py",
 			"interactiveTerminal": false
 		}
 	
