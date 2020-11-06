@@ -12,7 +12,7 @@ import CrabRobotLibrary
 def run_table(crabot):
 	crabot.gyro_reset()
 	crabot.gyro_drive(300, 0, 1300)
-	crabot.gyro_drive(40, 0, 390)
+	crabot.gyro_drive(40, 0, 350)
 
 if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")
