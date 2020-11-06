@@ -8,8 +8,7 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
-#hello
-#sup
+
 def run_table(crabot):
 	crabot.gyro_reset()
 	crabot.gyro_drive(300, 0, 1300)
