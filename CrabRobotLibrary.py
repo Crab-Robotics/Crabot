@@ -20,6 +20,7 @@ class Robot:
 	robot = DriveBase(left_wheel, right_wheel, wheel_diameter, axle_track)
 
 	def __init__(self, name, mood):
+		# self.robot.settings(0, 0, 100, 50)
 		self.name = name
 		self.mood = mood
 
@@ -46,24 +47,25 @@ class Robot:
 
 	def gyro_turn(self, degrees, direction):
 		print("start: " + str(self.gyro.angle()))
-		self.robot.turn(degrees)
-		# speed = 150
-		# if direction == Direction.CLOCKWISE:
-		# 	self.left_wheel.run(speed)
-		# 	self.right_wheel.run(-speed)
-		# 	while self.gyro.angle() < degrees:
-		# 		wait(10)
-		# else:
-		# 	self.left_wheel.run(-speed)
-		# 	self.right_wheel.run(speed)
-		# 	while self.gyro.angle() > degrees:
-		# 		wait(10)
+		self.robot.stop()
+		speed = 150
+		if direction == Direction.CLOCKWISE:
+			self.left_wheel.run(speed)
+			self.right_wheel.run(-speed)
+			while self.gyro.angle() < degrees:
+				wait(10)
+		else:
+			self.left_wheel.run(-speed)
+			self.right_wheel.run(speed)
+			while self.gyro.angle() > degrees:
+				wait(10)
 		
-		# self.left_wheel.stop(Stop.BRAKE)
-		# self.right_wheel.stop(Stop.BRAKE)
+		self.left_wheel.stop(Stop.BRAKE)
+		self.right_wheel.stop(Stop.BRAKE)
 		print("stop:  " + str(self.gyro.angle()))
 
 	def gyro_drive(self, speed, heading, distance):
+		self.robot.stop()
 		self.robot.reset()
 		actual_distance = 0
 		while actual_distance < distance:
@@ -73,6 +75,7 @@ class Robot:
 			actual_distance = self.robot.distance()
 
 	def bw_gyro_drive(self, speed, heading, distance):
+		self.robot.stop()
 		self.robot.reset()
 		actual_distance = 0
 		while actual_distance > distance:
