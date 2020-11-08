@@ -26,3 +26,8 @@ class Kate_Skills:
         print("Right color sensor RGB reading is",self.color_sensor_right.rgb())
         print("Right color sensor color is",self.color_sensor_right.color())
         print("My Gyro is reading",self.robot.gyro.angle())
+
+if __name__ == '__main__':
+    Crabot = CrabRobotLibrary.Robot("Crabot","Happy")
+	KateSkillBot = Kate_Skills(Crabot)
+	KateSkillBot.tell_me_about_your_skills()
