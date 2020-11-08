@@ -14,6 +14,8 @@ class Robot:
 	brick = EV3Brick()
 	left_wheel = Motor(Port.A)
 	right_wheel = Motor(Port.D)
+	color_sensor_left = ColorSensor(Port.S1)
+	color_sensor_right = ColorSensor(Port.S4)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
 	axle_track = 120
@@ -66,6 +68,15 @@ class Robot:
 		self.robot.reset()
 		actual_distance = 0
 		while actual_distance < distance:
+			correction = self.gyro.angle() * -10
+			self.robot.drive(speed, correction)
+			wait(10)
+			actual_distance = self.robot.distance()
+
+	def gyro_drive_reverse(self, speed, heading, distance):
+		self.robot.reset()
+		actual_distance = 0
+		while actual_distance > distance:
 			correction = self.gyro.angle() * -10
 			self.robot.drive(speed, correction)
 			wait(10)
