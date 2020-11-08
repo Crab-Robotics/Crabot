@@ -47,6 +47,13 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/run_cheese.py",
 			"interactiveTerminal": false
+		},
+		{
+			"name": "KateSkills",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/KateSkillsLibrary.py",
+			"interactiveTerminal": false
 		}
 	
 	]
