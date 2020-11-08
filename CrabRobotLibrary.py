@@ -14,7 +14,7 @@ class Robot:
 	brick = EV3Brick()
 	left_wheel = Motor(Port.A)
 	right_wheel = Motor(Port.D)
-	gyro = GyroSensor(Port.S2, Direction.CLOCKWISE)
+	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
 	axle_track = 120
 	robot = DriveBase(left_wheel, right_wheel, wheel_diameter, axle_track)
@@ -82,3 +82,7 @@ class Robot:
 	def move_backwards(self, distance_mm):
 		print("Move backwards",distance_mm,".")
 		self.robot.straight(distance_mm)
+
+if __name__ == '__main__':
+	Crabot = Robot("Crabot Test","Testy")
+	Crabot.tell_me_about_yourself()
