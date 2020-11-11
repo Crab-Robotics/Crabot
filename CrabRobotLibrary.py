@@ -14,6 +14,10 @@ class Robot:
 	brick = EV3Brick()
 	left_wheel = Motor(Port.A)
 	right_wheel = Motor(Port.D)
+	front_dog_gear = Motor(Port.C)
+	back_dog_gear = Motor(Port.B)
+	right_color = ColorSensor(Port.4)
+	left_color = ColorSensor(Port.1)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
 	axle_track = 120
