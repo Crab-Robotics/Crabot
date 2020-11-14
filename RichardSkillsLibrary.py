@@ -12,13 +12,11 @@ import CrabRobotLibrary
 
 # Define Class Robot
 class Richard_Skills:
-    
-    color_sensor_left = ColorSensor(Port.S3)
-    color_sensor_right = ColorSensor(Port.S4)
 
     def __init__(self, robot):
         self.robot = robot
-        
+        self.color_sensor_left = ColorSensor(Port.S3)
+        self.color_sensor_right = ColorSensor(Port.S4)
 
     def tell_me_about_your_skills(self):
         print("SKILLS - I can Dance, Wiggle, Big Wiggle, and Shuffle")
