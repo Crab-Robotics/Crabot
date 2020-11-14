@@ -14,12 +14,17 @@ class Robot:
 	brick = EV3Brick()
 	left_wheel = Motor(Port.A)
 	right_wheel = Motor(Port.D)
+	front_dog_gear = Motor(Port.B)
+	back_dog_gear = Motor(Port.C)
+	right_color = ColorSensor(Port.S4)
+	left_color = ColorSensor(Port.S1)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
 	axle_track = 120
 	robot = DriveBase(left_wheel, right_wheel, wheel_diameter, axle_track)
 
 	def __init__(self, name, mood):
+		# self.robot.settings(0, 0, 100, 50)
 		self.name = name
 		self.mood = mood
 
@@ -29,6 +34,13 @@ class Robot:
 		print("Wheel diameter is", self.wheel_diameter, ".")
 		print("Axle Track is", self.axle_track, ".")
 		print()
+	
+	def front_activate(self, speed, rotation_angle, direction = Direction.CLOCKWISE):
+		print("Activating front motor")
+		if direction == Direction.CLOCKWISE:
+			self.front_dog_gear.run_angle(speed, rotation_angle)
+		elif direction == Direction.COUNTERCLOCKWISE:
+			self.front_dog_gear.run_angle(-speed, rotation_angle)
 
 	def move_forward(self, distance_mm):
 		print("Move forward", distance_mm, ".")
@@ -46,6 +58,7 @@ class Robot:
 
 	def gyro_turn(self, degrees, direction):
 		print("start: " + str(self.gyro.angle()))
+		self.robot.stop()
 		speed = 150
 		if direction == Direction.CLOCKWISE:
 			self.left_wheel.run(speed)
@@ -63,6 +76,7 @@ class Robot:
 		print("stop:  " + str(self.gyro.angle()))
 
 	def gyro_drive(self, speed, heading, distance):
+		self.robot.stop()
 		self.robot.reset()
 		actual_distance = 0
 		while actual_distance < distance:
@@ -70,6 +84,18 @@ class Robot:
 			self.robot.drive(speed, correction)
 			wait(10)
 			actual_distance = self.robot.distance()
+		self.robot.stop()
+
+	def bw_gyro_drive(self, speed, heading, distance):
+		self.robot.stop()
+		self.robot.reset()
+		actual_distance = 0
+		while actual_distance > distance:
+			correction = self.gyro.angle() * -10
+			self.robot.drive(speed, correction)
+			wait(10)
+			actual_distance = self.robot.distance()
+		self.robot.stop()
 
 	def beep(self, number_of_beeps):
 		print("Beep",number_of_beeps,"times.")

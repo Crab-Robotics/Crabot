@@ -11,9 +11,22 @@ import CrabRobotLibrary
 
 def run_table(crabot):
 	crabot.gyro_reset()
+	# todo: lower the front medium motor so its down
 	crabot.gyro_drive(300, 0, 1300)
-	crabot.gyro_drive(40, 0, 400)
-
+	crabot.gyro_drive(40, 0, 365)
+	crabot.bw_gyro_drive(-150, 0, -15)
+	crabot.gyro_turn(-90, -90)
+	crabot.gyro_reset()
+	# back into wall and reset
+	crabot.bw_gyro_drive(-80, 0, -40)
+	crabot.gyro_reset()
+	crabot.gyro_drive(160, -0, 1000)
+	crabot.gyro_turn(35, Direction.CLOCKWISE)
+	crabot.gyro_reset()
+	crabot.front_activate(100, 65, Direction.COUNTERCLOCKWISE)
+	crabot.gyro_drive(90, 0, 150)
+	wait(1000)
+	crabot.front_activate(100, 50, Direction.COUNTERCLOCKWISE)
 
 if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")

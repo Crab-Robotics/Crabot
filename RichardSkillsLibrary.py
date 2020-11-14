@@ -65,3 +65,10 @@ class Richard_Skills:
             self.robot.turn(angle_turn) 
         else:
             print("There is some room...")
+    
+    def under_bar_and_dance():
+        Crabot.move_forward(950)
+        Crabot.turn(90)
+        Crabot.move_forward(400)
+        Crabot.turn(45)
+        Crabot.move_forward(390)
