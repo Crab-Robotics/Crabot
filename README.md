@@ -10,7 +10,7 @@ CrabRobotLibrary:
  - `tell_me_about_your_skills()`
  - `move_forward()`
  - `turn()`
- - `front_activate()` - actives the front attachment
+ - `front_activate()` - activates the front attachment
  - `gyro_reset()`
  - `gyro_turn()`
  - `gyro_drive()`
