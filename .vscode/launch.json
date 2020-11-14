@@ -54,7 +54,13 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/KateSkillsLibrary.py",
 			"interactiveTerminal": false
+		},
+		{
+			"name": "Run Basketball",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/run_basketball.py",
+			"interactiveTerminal": false
 		}
-	
 	]
 }
