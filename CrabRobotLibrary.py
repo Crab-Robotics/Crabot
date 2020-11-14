@@ -18,7 +18,6 @@ class Robot:
 	back_dog_gear = Motor(Port.C)
 	right_color = ColorSensor(Port.S4)
 	left_color = ColorSensor(Port.S1)
-	front_motor = Motor(Port.B)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
 	axle_track = 120
