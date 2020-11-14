@@ -21,7 +21,8 @@ def run_table(crabot):
 	crabot.gyro_drive(160, -0, 1000)
 	crabot.gyro_turn(25, Direction.CLOCKWISE)
 	crabot.gyro_reset()
-	crabot.gyro_drive(90, 0, 140)
+	crabot.medium_motor_turn(10, Direction.COUNTERCLOCKWISE)
+	crabot.gyro_drive(90, 0, 160)
 
 if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")

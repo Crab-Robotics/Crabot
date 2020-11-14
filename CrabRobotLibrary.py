@@ -18,6 +18,7 @@ class Robot:
 	back_dog_gear = Motor(Port.B)
 	right_color = ColorSensor(Port.4)
 	left_color = ColorSensor(Port.1)
+	front_motor = Motor(Port.B)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
 	axle_track = 120
@@ -34,6 +35,14 @@ class Robot:
 		print("Wheel diameter is", self.wheel_diameter, ".")
 		print("Axle Track is", self.axle_track, ".")
 		print()
+	
+	def medium_motor_turn(self, speed, direction):
+		print("test")
+		if direction == Direction.CLOCKWISE:
+			self.front_motor.run(speed)
+		elif direction == Direction.COUNTERCLOCKWISE:
+			self.front_motor.run(-speed)
+
 
 	def move_forward(self, distance_mm):
 		print("Move forward", distance_mm, ".")
