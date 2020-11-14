@@ -14,10 +14,10 @@ class Robot:
 	brick = EV3Brick()
 	left_wheel = Motor(Port.A)
 	right_wheel = Motor(Port.D)
-	front_dog_gear = Motor(Port.C)
-	back_dog_gear = Motor(Port.B)
-	right_color = ColorSensor(Port.4)
-	left_color = ColorSensor(Port.1)
+	front_dog_gear = Motor(Port.B)
+	back_dog_gear = Motor(Port.C)
+	right_color = ColorSensor(Port.S4)
+	left_color = ColorSensor(Port.S1)
 	front_motor = Motor(Port.B)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
@@ -36,13 +36,12 @@ class Robot:
 		print("Axle Track is", self.axle_track, ".")
 		print()
 	
-	def medium_motor_turn(self, speed, direction):
-		print("test")
+	def front_activate(self, speed, rotation_angle, direction = Direction.CLOCKWISE):
+		print("Activating front motor")
 		if direction == Direction.CLOCKWISE:
-			self.front_motor.run(speed)
+			self.front_dog_gear.run_angle(speed, rotation_angle)
 		elif direction == Direction.COUNTERCLOCKWISE:
-			self.front_motor.run(-speed)
-
+			self.front_dog_gear.run_angle(-speed, rotation_angle)
 
 	def move_forward(self, distance_mm):
 		print("Move forward", distance_mm, ".")
@@ -86,6 +85,7 @@ class Robot:
 			self.robot.drive(speed, correction)
 			wait(10)
 			actual_distance = self.robot.distance()
+		self.robot.stop()
 
 	def bw_gyro_drive(self, speed, heading, distance):
 		self.robot.stop()
@@ -96,6 +96,7 @@ class Robot:
 			self.robot.drive(speed, correction)
 			wait(10)
 			actual_distance = self.robot.distance()
+		self.robot.stop()
 
 	def beep(self, number_of_beeps):
 		print("Beep",number_of_beeps,"times.")
