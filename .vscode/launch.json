@@ -61,6 +61,13 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/run_basketball.py",
 			"interactiveTerminal": false
+		},
+		{
+			"name": "Run Treadmill",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/run_treadmill.py",
+			"interactiveTerminal": false
 		}
 	]
 }

@@ -86,6 +86,17 @@ class Robot:
 			actual_distance = self.robot.distance()
 		self.robot.stop()
 
+	def gyro_drive_until_white(self, speed, heading, side):
+		self.robot.stop()
+		self.robot.reset()
+		sensor = self.right_color
+		if side == "left":
+			sensor = self.left_color
+		while sensor.reflection() < 50:
+			correction = self.gyro.angle() * -10
+			self.robot.drive(speed, correction)
+		self.robot.stop()
+
 	def bw_gyro_drive(self, speed, heading, distance):
 		self.robot.stop()
 		self.robot.reset()
