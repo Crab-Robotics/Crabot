@@ -14,6 +14,7 @@ CrabRobotLibrary:
  - `gyro_reset()`
  - `gyro_turn()`
  - `gyro_drive()`
+ - `gyro_drive_until_white()`
  - `bw_gyro_drive()`
  - `beep()`
  - `move_backwards()`
