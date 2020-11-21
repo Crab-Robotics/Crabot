@@ -26,11 +26,12 @@ while True:
 		print("The right button was pressed.")
 		wait(2000)
 	elif Button.UP in b:
-		print("The top button was pressed.")
+		 #M01, M04, M05, M08 (red or blue blocks)
 		wait(2000)
 	elif Button.DOWN in b:
-		print("The bottom button was pressed.")
+		# M02, M06, M07, M08 (yellow block)
 		wait(2000)
 	else:
 		wait(10)
-	
+
+#hewo
