@@ -80,7 +80,8 @@ class Robot:
 		self.robot.reset()
 		actual_distance = 0
 		while actual_distance < distance:
-			correction = self.gyro.angle() * -10
+			adjusted_angle =  self.gyro.angle() - heading
+			correction = adjusted_angle * -10
 			self.robot.drive(speed, correction)
 			wait(10)
 			actual_distance = self.robot.distance()

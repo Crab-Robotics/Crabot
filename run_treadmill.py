@@ -14,10 +14,8 @@ def run_treadmill(crabot):
 	crabot.gyro_drive(400, 0, 1850)
 	crabot.gyro_drive_until_white(200, 0, "left")
 	crabot.gyro_turn(20, Direction.CLOCKWISE)
-	crabot.gyro_reset()
 	crabot.gyro_drive(100, 20, 300)
 	crabot.gyro_turn(-20, Direction.COUNTERCLOCKWISE)
-	crabot.gyro_reset()
 	crabot.gyro_drive(200, 0, 200)
 
 if __name__ == '__main__':
