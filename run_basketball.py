@@ -19,7 +19,7 @@ def run_table_1(crabot):
 	crabot.gyro_drive(300, 0, 780)
 	crabot.gyro_turn(-85, Direction.COUNTERCLOCKWISE)
 	crabot.gyro_reset()
-	crabot.gyro_drive(270, 0, 360)
+	crabot.gyro_drive(500, 0, 390)
 def run_table_2(crabot):
     #this line of code does the first level of the elevator
     crabot.front_activate(10000, 5766, Direction.CLOCKWISE)
@@ -29,12 +29,17 @@ def run_table_2(crabot):
     crabot.bw_gyro_drive(-100,0,-105)
     crabot.front_activate(10000, 3966, Direction.COUNTERCLOCKWISE)
     crabot.gyro_reset()
-    crabot.gyro_drive(100,0,100)
+    crabot.gyro_drive(300,0,130)
     crabot.front_activate(10000, 11440, Direction.CLOCKWISE)
     crabot.front_activate(10000, 1490, Direction.COUNTERCLOCKWISE)
     crabot.gyro_reset()
-    crabot.bw_gyro_drive(-100,0,-100)
-    crabot.front_activate(10000, 9570, Direction.COUNTERCLOCKWISE)
+    crabot.bw_gyro_drive(-500,0,-450)
+    crabot.gyro_reset()
+    crabot.gyro_turn(-27, Direction.COUNTERCLOCKWISE)
+    crabot.gyro_reset()
+    crabot.gyro_drive(1000, 0, 1300)
+    crabot.front_activate(10000, 8000, Direction.COUNTERCLOCKWISE)
+    crabot.gyro_reset()
 	
 if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")
