@@ -94,7 +94,8 @@ class Robot:
 		if side == "left":
 			sensor = self.left_color
 		while sensor.reflection() < 50:
-			correction = self.gyro.angle() * -10
+			adjusted_angle =  self.gyro.angle() - heading
+			correction = adjusted_angle * -10
 			self.robot.drive(speed, correction)
 		self.robot.stop()
 
@@ -103,7 +104,8 @@ class Robot:
 		self.robot.reset()
 		actual_distance = 0
 		while actual_distance > distance:
-			correction = self.gyro.angle() * -10
+			adjusted_angle =  self.gyro.angle() - heading
+			correction = adjusted_angle * -10
 			self.robot.drive(speed, correction)
 			wait(10)
 			actual_distance = self.robot.distance()
