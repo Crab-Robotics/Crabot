@@ -41,6 +41,18 @@ class Robot:
 			self.front_dog_gear.run_angle(speed, rotation_angle)
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.front_dog_gear.run_angle(-speed, rotation_angle)
+	
+	def front_reset(self, direction = Direction.CLOCKWISE):
+		if direction == Direction.CLOCKWISE:
+			self.front_dog_gear.run_time(500, 1000)
+		elif direction == Direction.COUNTERCLOCKWISE:
+			self.front_dog_gear.run_time(-500, 1000)
+
+	def back_reset(self, direction = Direction.CLOCKWISE):
+		if direction == Direction.CLOCKWISE:
+			self.back_dog_gear.run_time(500, 1000)
+		elif direction == Direction.COUNTERCLOCKWISE:
+			self.back_dog_gear.run_time(-500, 1000)
 
 	def back_activate(self, speed, rotation_angle, direction = Direction.CLOCKWISE):
 		print("Activating back motor")
