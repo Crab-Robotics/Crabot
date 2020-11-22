@@ -15,7 +15,7 @@ def run_table(crabot):
 	# todo: lower the front medium motor so its down
 
 	crabot.front_activate(100, 65, Direction.COUNTERCLOCKWISE)
-	crabot.gyro_drive(300, 0, 1280)
+	crabot.gyro_drive(300, 0, 1270)
 	crabot.gyro_drive(40, 0, 385)
 	crabot.bw_gyro_drive(-150, 0, -15)
 	crabot.gyro_turn(-90, -90)
@@ -30,8 +30,15 @@ def run_table(crabot):
 	crabot.gyro_drive(90, 35, 150)
 	wait(1000)
 	# flips up boccia ball
-	crabot.front_activate(100, 50, Direction.COUNTERCLOCKWISE)
-	crabot.bw_gyro_drive(-40, 0, -100)
+	crabot.bw_gyro_drive(-100, 35, -10)
+	crabot.front_activate(100, 90, Direction.COUNTERCLOCKWISE)
+	crabot.back_activate(200, 200, Direction.CLOCKWISE)
+	crabot.bw_gyro_drive(-100, 55, -200)
+	wait(1000)
+	crabot.back_forever(-800)
+	wait(1000)
+	crabot.gyro_drive(100, 55, 40)
+	# let's dance
 	crabot.gyro_turn(-85, Direction.COUNTERCLOCKWISE) 
 	crabot.front_activate(100, 50, Direction.CLOCKWISE)
 	crabot.gyro_drive(250, -50, 600)
