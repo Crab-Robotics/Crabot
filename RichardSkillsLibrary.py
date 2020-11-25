@@ -74,4 +74,4 @@ class Richard_Skills:
         Crabot.move_forward(390)
 
     def speed_and_power(distance):
-        Crabot.gyro_drive(2000, 0, distance)
+        Crabot.gyro_drive(200000000000000000, 0, distance)
