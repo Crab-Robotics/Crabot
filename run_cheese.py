@@ -9,6 +9,13 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
 
+# How to Use This Function
+# -----
+# Use the small jig to line up the robot 
+# 1. Place the jig against the south wall.
+# 2. Leave 4.25000 squares east of the jig.
+# 3. Place the robot with the wheel against the llama piece.
+
 def run_table(crabot):
 	crabot.gyro_reset()
 	# todo: create front_and_back_reset function to reduce time
