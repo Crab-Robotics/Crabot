@@ -11,22 +11,26 @@ import CrabRobotLibrary
 
 def run_treadmill(crabot):
 	crabot.gyro_reset()
-	crabot.gyro_drive(400, 0, 3000)
-	while crabot.gyro.angle() > 0:
-		crabot.left_wheel.run(-100)
-	crabot.left_wheel.stop()
-	wait(1000)
-	crabot.right_wheel.run_time(800, 3000)
+	crabot.gyro_drive(800, 0, 2200)
+	crabot.gyro_drive_until_white(400, 0, "left")
+	crabot.gyro_drive(100, 0, 165)
+	crabot.gyro_turn(-90, Direction.COUNTERCLOCKWISE)
+	crabot.bw_gyro_drive(-100, -90, -300)
+	# while crabot.gyro.angle() > 0:
+	# 	crabot.left_wheel.run(-100)
+	# crabot.left_wheel.stop()
+	# wait(1000)
+	# crabot.right_wheel.run_time(800, 3000)
 	# crabot.gyro_drive_until_white(200, 0, "left")
 	# crabot.gyro_turn(20, Direction.CLOCKWISE)
 	# crabot.gyro_drive(200, 20, 300)
 	# crabot.gyro_turn(-20, Direction.COUNTERCLOCKWISE)
 	# crabot.gyro_drive(200, 0, 250)
 	# wait(2000)
-	crabot.bw_gyro_drive(-150, 0, -300)
-	crabot.gyro_turn(-90, -90)
-	crabot.gyro_reset()
-	crabot.bw_gyro_drive(-150, 0, -250)
+	# crabot.bw_gyro_drive(-150, 0, -300)
+	# crabot.gyro_turn(-90, -90)
+	# crabot.gyro_reset()
+	# crabot.bw_gyro_drive(-150, 0, -250)
 
 def treadmill(crabot):
 	print("time to get those steps in!")
@@ -59,4 +63,6 @@ def row_machine(crabot):
 
 if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")
+	run_treadmill(crabot)
+	row_machine(crabot)
 	treadmill(crabot)
