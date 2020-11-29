@@ -61,5 +61,3 @@ if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")
 	run_table_1(crabot)
 	run_table_2(crabot)
-
-    #crabot.left/right_motor.brake(
