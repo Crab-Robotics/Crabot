@@ -28,7 +28,7 @@ def run_table_1(crabot):
 
 	crabot.gyro_turn(45, Direction.CLOCKWISE)
 	crabot.gyro_reset()
-	crabot.gyro_drive(700, 0, 780)
+	crabot.gyro_drive(700, 0, 70)
 	crabot.gyro_turn(-90, Direction.COUNTERCLOCKWISE)
 	crabot.gyro_reset()
 	crabot.gyro_drive(500, 0, 390)
