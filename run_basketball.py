@@ -17,21 +17,23 @@ import CrabRobotLibrary
 
 def run_table_1(crabot):
 	#This pushes the innovation project out(M01).
-	crabot.bw_gyro_drive(-400, 0, -100)
+	crabot.bw_gyro_drive(-500, 0, -10)
 	crabot.gyro_reset()
-	crabot.gyro_drive(300, 0, 300)
-	crabot.gyro_drive(500, 0, 300)
-	wait(500)
+	crabot.gyro_drive(250, 0, 570)
+	crabot.brake()
+	wait(250)
 	crabot.bw_gyro_drive(-100, 0, -50)
+	wait(250)
 
 	#This takes us to the basketball hoop(M05).
 
 	crabot.gyro_turn(45, Direction.CLOCKWISE)
 	crabot.gyro_reset()
-	crabot.gyro_drive(700, 0, 70)
+	crabot.gyro_drive(250, 0, 750)
+	crabot.brake()
 	crabot.gyro_turn(-90, Direction.COUNTERCLOCKWISE)
 	crabot.gyro_reset()
-	crabot.gyro_drive(500, 0, 390)
+	crabot.gyro_drive(500, 0, 450)
 def run_table_2(crabot):
 
 	#this code does the first level of the basketball and lifts the red cube(M05,M08).
