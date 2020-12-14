@@ -80,10 +80,6 @@ class Robot:
 		print("Turn", angle, "degrees.")
 		self.robot.turn(angle)
 
-	def brake(self):
-		self.left_wheel.brake()
-		self.right_wheel.brake()
-
 	def gyro_reset(self):
 		self.gyro.reset_angle(0)
 		while self.gyro.angle() != 0:
