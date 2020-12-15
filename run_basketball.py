@@ -12,15 +12,17 @@ import CrabRobotLibrary
 def run_table_1(crabot):
 	#This pushes the innovation project out(M01).
 	crabot.gyro_reset()
-	crabot.gyro_drive(500, 0, 600)
+	crabot.gyro_drive(500, 0, 590)
+	crabot.brake()
 	crabot.bw_gyro_drive(-100, 0, -50)
 
     #This takes us to the basketball hoop(M05).
 
 	crabot.gyro_turn(45, Direction.CLOCKWISE)
 	crabot.gyro_reset()
-	crabot.gyro_drive(700, 0, 720)
-	crabot.gyro_turn(-90, Direction.COUNTERCLOCKWISE)
+	crabot.gyro_drive(500, 0, 735)
+	crabot.brake()
+	crabot.gyro_turn(-85, Direction.COUNTERCLOCKWISE)
 	crabot.gyro_reset()
 	crabot.gyro_drive(500, 0, 390)
 def run_table_2(crabot):
@@ -43,7 +45,7 @@ def run_table_2(crabot):
 
     #This code knocks over the bench and returns home(M04).
     
-    crabot.bw_gyro_drive(-500,0,-450)
+    crabot.bw_gyro_drive(-500,0,-435)
     crabot.gyro_reset()
     crabot.gyro_turn(-27, Direction.COUNTERCLOCKWISE)
     crabot.gyro_reset()
