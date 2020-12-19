@@ -15,6 +15,7 @@ def run_table_1(crabot):
 	crabot.gyro_drive(500, 0, 590)
 	crabot.brake()
 	crabot.bw_gyro_drive(-100, 0, -50)
+	wait(250)
 
     #This takes us to the basketball hoop(M05).
 
@@ -24,7 +25,7 @@ def run_table_1(crabot):
 	crabot.brake()
 	crabot.gyro_turn(-85, Direction.COUNTERCLOCKWISE)
 	crabot.gyro_reset()
-	crabot.gyro_drive(500, 0, 390)
+	crabot.gyro_drive(500, 0, 450)
 def run_table_2(crabot):
 
     #this code does the first level of the basketball and lifts the red cube(M05,M08).
@@ -52,6 +53,7 @@ def run_table_2(crabot):
     crabot.gyro_drive(1000, 0, 1300)
     crabot.front_activate(10000, 9230, Direction.COUNTERCLOCKWISE)
     crabot.gyro_reset()
+
 	
 if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")
