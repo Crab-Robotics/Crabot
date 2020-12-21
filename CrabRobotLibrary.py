@@ -48,6 +48,13 @@ class Robot:
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.front_dog_gear.run_time(-500, 1000)
 
+	def front_forever(self, speed, direction = Direction.CLOCKWISE):
+		print("Activating front motor")
+		if direction == Direction.CLOCKWISE:
+			self.front_dog_gear.run(speed)
+		elif direction == Direction.COUNTERCLOCKWISE:
+			self.front_dog_gear.run(-speed)
+		
 	def back_reset(self, direction = Direction.CLOCKWISE):
 		if direction == Direction.CLOCKWISE:
 			self.back_dog_gear.run_time(500, 1000)
@@ -71,6 +78,9 @@ class Robot:
 	def back_brake(self):
 		print("Stopping back motor")
 		self.back_dog_gear.brake()
+
+	def reset_elevator(self):
+		self.front_dog_gear.run_until_stalled(-10000, Stop.COAST)
 
 	def move_forward(self, distance_mm):
 		print("Move forward", distance_mm, ".")
