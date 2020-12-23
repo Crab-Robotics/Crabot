@@ -39,7 +39,7 @@ def row_machine(crabot):
 	crabot.gyro_drive(200, 0, 430)
 	crabot.gyro_turn(50, Direction.CLOCKWISE)
 	crabot.gyro_drive(100, 55, 60)
-	crabot.front_activate(100, 240, Direction.CLOCKWISE)
+	crabot.front_activate(100, 220, Direction.CLOCKWISE)
 	crabot.front_dog_gear.brake()
 	crabot.gyro_turn(0, Direction.COUNTERCLOCKWISE)
 	crabot.bw_gyro_drive(-100, 0, -50)
