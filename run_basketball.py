@@ -19,21 +19,18 @@ def run_table_1(crabot):
 	#This takes us to the basketball hoop(M05).
 
 	crabot.gyro_turn(45, Direction.CLOCKWISE)
-	crabot.gyro_reset()
-	crabot.gyro_drive(500, 0, 735)
+	crabot.gyro_drive(500, 45, 735)
 	crabot.brake()
-	crabot.gyro_turn(-85, Direction.COUNTERCLOCKWISE)
+	crabot.gyro_turn(-40, Direction.COUNTERCLOCKWISE)
 	crabot.brake()
-	crabot.gyro_reset()
-	crabot.gyro_drive(500, 0, 390)
+	crabot.gyro_drive(500, -45, 390)
 def run_table_2(crabot):
 
 	#this code does the first level of the basketball and lifts the red cube(M05,M08).
 
 	crabot.front_activate(10000, 5766, Direction.CLOCKWISE)
 	crabot.front_activate(10000, 1440, Direction.COUNTERCLOCKWISE)
-	crabot.gyro_reset()
-	crabot.bw_gyro_drive(-100,0,-105)
+	crabot.bw_gyro_drive(-100,-45,-105)
 	crabot.front_activate(10000, 4146, Direction.COUNTERCLOCKWISE)
 
 	#This code does the second level of the basketball(M05).
@@ -46,8 +43,8 @@ def run_table_2(crabot):
 
 	#This code knocks over the bench and returns home(M04).
 	
-	crabot.bw_gyro_drive(-500,0,-435)
 	crabot.front_forever(10000, Direction.COUNTERCLOCKWISE)
+	crabot.bw_gyro_drive(-500,0,-435)
 	crabot.gyro_reset()
 	crabot.gyro_turn(-27, Direction.COUNTERCLOCKWISE)
 	crabot.gyro_reset()
