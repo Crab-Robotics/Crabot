@@ -24,6 +24,7 @@ while True:
 		wait(2000)
 	elif Button.LEFT in b:
 		print("The left button was pressed.")
+		crabot.reset_elevator()
 		wait(2000)
 	elif Button.RIGHT in b:
 		print("The right button was pressed.")
