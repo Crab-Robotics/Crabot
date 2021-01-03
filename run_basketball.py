@@ -35,21 +35,16 @@ def run_table_2(crabot):
 
 	#This code does the second level of the basketball(M05).
 
-	crabot.gyro_reset()
-	crabot.gyro_drive(300,0,100)
+	crabot.gyro_drive(300,-45,100)
 	crabot.front_activate(10000, 11440, Direction.CLOCKWISE)
 	crabot.front_activate(10000, 1490, Direction.COUNTERCLOCKWISE)
-	crabot.gyro_reset()
 
 	#This code knocks over the bench and returns home(M04).
 	
 	crabot.front_forever(10000, Direction.COUNTERCLOCKWISE)
-	crabot.bw_gyro_drive(-500,0,-435)
-	crabot.gyro_reset()
-	crabot.gyro_turn(-27, Direction.COUNTERCLOCKWISE)
-	crabot.gyro_reset()
-	crabot.gyro_drive(1000, 0, 1350)
-	crabot.gyro_reset()
+	crabot.bw_gyro_drive(-500,-45,-435)
+	crabot.gyro_turn(-75, Direction.COUNTERCLOCKWISE)
+	crabot.gyro_drive(1000, -75, 1350)
 	crabot.reset_elevator()
 	
 if __name__ == '__main__':
