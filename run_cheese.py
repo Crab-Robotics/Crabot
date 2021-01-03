@@ -24,7 +24,7 @@ def run_table(crabot):
 		
 	# todo: lower the front medium motor so its down
 
-	crabot.front_activate(200, 215, Direction.CLOCKWISE)
+	crabot.front_activate(200, 195, Direction.CLOCKWISE)
 	crabot.gyro_drive(350, 0, 1180)
 	crabot.gyro_drive(40, 0, 385)
 	crabot.bw_gyro_drive(-150, 0, -15)
