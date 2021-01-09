@@ -33,7 +33,7 @@ def run_table(crabot):
 
 	#back into wall and reset
 
-	crabot.bw_gyro_drive(-80, 0, -60)
+	crabot.bw_gyro_drive(-120, 0, -80)
 	crabot.gyro_reset()
 	crabot.gyro_drive(500, -0, 1000)
 	crabot.gyro_turn(35, Direction.CLOCKWISE)
@@ -47,7 +47,7 @@ def run_table(crabot):
 	crabot.back_activate(200, 250, Direction.CLOCKWISE)
 	crabot.bw_gyro_drive(-190, 55, -170)
 	wait(1000)
-	crabot.back_forever(-800)
+	crabot.back_forever(-1000)
 	wait(1000)
 	crabot.gyro_drive(150, 55, 40)
 
