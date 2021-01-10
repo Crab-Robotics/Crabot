@@ -68,13 +68,6 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/run_treadmill.py",
 			"interactiveTerminal": false
-		},
-		{
-			"name": "Run Cube",
-			"type": "ev3devBrowser",
-			"request": "launch",
-			"program": "/home/robot/${workspaceRootFolderName}/run_cube.py",
-			"interactiveTerminal": false
 		}
 	]
 }
