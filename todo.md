@@ -2,15 +2,21 @@
 
 **Run Treadmill**
  - [ ] Speed up run_treadmill - _Greyden_
- - [ ] Remove the handbrake turn ಥ_ಥ - _Adam_
+ - [x] Remove the handbrake turn ಥ_ಥ - _Adam_
 
 **Run Cheese**
- - [ ] Fix 2nd slide person - _Greyden_
+ - [x] Fix 2nd slide person - _Greyden_
  - [ ] Try to make yellow cube more consistent - _Richard_
+ - [ ] Prevent stall on boccia ball attachment
 
 **Run Basketball**
- - [ ] Remove gyro resets - _Kate_
+ - [x] Remove gyro resets - _Kate_
  - [ ] Add ***The Wing***. - _Zac_
  
 **Misc.**
  - [ ] Build the innovation project model - _Richard_
+ - [ ] Put all motors at coast at the end of each program
+ - [ ] Remove right light sensor
+ - [ ] Build model rowing machine: up or down? - _Mr. Joe_
+ - [ ] Update the robot chassis - _Greyden_
+ - [ ] Something to hold the cord of the front medium motor - _Zac_
