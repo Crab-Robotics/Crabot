@@ -23,4 +23,3 @@ def run_table_3(crabot):
 if __name__ == '__main__':
     crabot = CrabRobotLibrary.Robot("Crabot","Competitive")
     run_table_3(crabot)
-	run_table_2(crabot)
