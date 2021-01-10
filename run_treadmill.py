@@ -28,8 +28,8 @@ def treadmill(crabot):
 	crabot.left_wheel.stop()
 	wait(1000)
 	crabot.right_wheel.run_time(800, 3000)
-	crabot.bw_gyro_drive(-800, 90, -2000)
-	crabot.gyro_drive(800, -90, 1000)
+	crabot.bw_gyro_drive(-800, 90, -3000)
+	# crabot.gyro_drive(800, -90, 1000)
 
 def row_machine(crabot):
 	print("row row row your boat")
