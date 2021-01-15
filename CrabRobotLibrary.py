@@ -35,6 +35,12 @@ class Robot:
 		print("Axle Track is", self.axle_track, ".")
 		print()
 	
+	def coast(self):
+		self.front_dog_gear.stop()
+		self.back_dog_gear.stop()
+		self.left_wheel.stop()
+		self.right_wheel.stop()
+	
 	def front_activate(self, speed, rotation_angle, direction = Direction.CLOCKWISE):
 		print("Activating front motor")
 		if direction == Direction.CLOCKWISE:
