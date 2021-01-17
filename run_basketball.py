@@ -29,9 +29,9 @@ def run_table_2(crabot):
 	#this code does the first level of the basketball and lifts the red cube(M05,M08).
 
 	crabot.front_activate(10000, 5766, Direction.CLOCKWISE)
-	crabot.front_activate(10000, 1440, Direction.COUNTERCLOCKWISE)
+	crabot.front_activate(10000, 1800, Direction.COUNTERCLOCKWISE)
 	crabot.bw_gyro_drive(-100,-45,-105)
-	crabot.front_activate(10000, 4146, Direction.COUNTERCLOCKWISE)
+	crabot.front_activate(10000, 3786, Direction.COUNTERCLOCKWISE)
 
 	#This code does the second level of the basketball(M05).
 
