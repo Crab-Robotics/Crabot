@@ -16,7 +16,7 @@
 **Misc.**
  - [ ] Build the innovation project model - _Richard_
  - [x] Put all motors at coast at the end of each program - _Greyden_
- - [ ] Remove right light sensor
+ - [x] Remove right light sensor - _Greyden_
  - [x] Build model rowing machine: up or down? - _Mr. Joe_
  - [x] Update the robot chassis - _Greyden_
  - [ ] Something to hold the cord of the front medium motor - _Zac_
