@@ -11,6 +11,7 @@ import CrabRobotLibrary
 
 def run_table_1(crabot):
 	#This pushes the innovation project out(M01).
+	crabot.bw_gyro_drive(-120, 0, -80)
 	crabot.gyro_reset()
 	crabot.gyro_drive(500, 0, 590)
 	crabot.brake()
