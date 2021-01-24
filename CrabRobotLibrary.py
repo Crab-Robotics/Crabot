@@ -16,7 +16,7 @@ class Robot:
 	right_wheel = Motor(Port.D)
 	front_dog_gear = Motor(Port.B)
 	back_dog_gear = Motor(Port.C)
-	#right_color = ColorSensor(Port.S4)
+	right_color = ColorSensor(Port.S4)
 	left_color = ColorSensor(Port.S1)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
@@ -134,7 +134,7 @@ class Robot:
 	def gyro_drive_until_white(self, speed, heading, side):
 		self.robot.stop()
 		self.robot.reset()
-		sensor = self.left_color
+		sensor = self.right_color
 		if side == "left":
 			sensor = self.left_color
 		while sensor.reflection() < 50:
