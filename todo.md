@@ -15,7 +15,7 @@
  - [ ] Add ***The Wing***. - _Zac_
  
 **Misc.**
- - [ ] Build het innovation project model - _Richard_
+ - [ ] Build the innovation project model - _Richard_
  - [x] Put all motors at coast at the end of each program - _Greyden_
  - [ ] Remove right light sensor
  - [x] Build model rowing machine: up or down? - _Mr. Joe_
