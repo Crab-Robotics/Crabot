@@ -16,7 +16,7 @@ class Robot:
 	right_wheel = Motor(Port.D)
 	front_dog_gear = Motor(Port.B)
 	back_dog_gear = Motor(Port.C)
-	right_color = ColorSensor(Port.S4)
+	#right_color = ColorSensor(Port.S4)
 	left_color = ColorSensor(Port.S1)
 	gyro = GyroSensor(Port.S2, Direction.COUNTERCLOCKWISE)
 	wheel_diameter = 95
@@ -34,6 +34,12 @@ class Robot:
 		print("Wheel diameter is", self.wheel_diameter, ".")
 		print("Axle Track is", self.axle_track, ".")
 		print()
+	
+	def coast(self):
+		self.front_dog_gear.stop()
+		self.back_dog_gear.stop()
+		self.left_wheel.stop()
+		self.right_wheel.stop()
 	
 	def front_activate(self, speed, rotation_angle, direction = Direction.CLOCKWISE):
 		print("Activating front motor")
@@ -134,7 +140,7 @@ class Robot:
 	def gyro_drive_until_white(self, speed, heading, side):
 		self.robot.stop()
 		self.robot.reset()
-		sensor = self.right_color
+		sensor = self.left_color
 		if side == "left":
 			sensor = self.left_color
 		while sensor.reflection() < 50:
