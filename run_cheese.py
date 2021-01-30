@@ -35,27 +35,28 @@ def run_table(crabot):
 
 	crabot.bw_gyro_drive(-120, 0, -80)
 	crabot.gyro_reset()
-	crabot.gyro_drive(500, -0, 1000)
+	crabot.gyro_drive(750, -0, 1000)
 	crabot.gyro_turn(35, Direction.CLOCKWISE)
-	crabot.gyro_drive(90, 35, 140)
-	wait(1000)
+	crabot.gyro_drive(90, 40, 130)
+	wait(100)
 
 	# flips up boccia ball
 
-	crabot.bw_gyro_drive(-100, 35, -10)
+	crabot.bw_gyro_drive(-100, 40, -35)
 	crabot.front_activate(100, 90, Direction.COUNTERCLOCKWISE)
 	crabot.back_activate(200, 250, Direction.CLOCKWISE)
 	crabot.bw_gyro_drive(-190, 55, -170)
-	wait(1000)
+	wait(100)
 	crabot.back_forever(-1000)
-	wait(1000)
+	wait(100)
 	crabot.gyro_drive(150, 55, 40)
 
 	# let's dance
 	
-	crabot.gyro_turn(-85, Direction.COUNTERCLOCKWISE) 
-	crabot.front_activate(100, 50, Direction.CLOCKWISE)
-	crabot.gyro_drive(250, -50, 600)
+	crabot.gyro_turn(-50, Direction.COUNTERCLOCKWISE) 
+	crabot.front_forever(1000, Direction.COUNTERCLOCKWISE)
+	crabot.gyro_drive(500, -50, 600)
+	crabot.front_dog_gear.stop()
 	crabot.gyro_reset()
 	while True:
 		crabot.gyro_drive(90, 0, 100)
