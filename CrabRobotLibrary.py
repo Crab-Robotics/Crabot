@@ -85,6 +85,15 @@ class Robot:
 		print("Stopping back motor")
 		self.back_dog_gear.brake()
 
+	def reset_attachments(self):
+		print("Resetting attachments")
+		self.front_forever(1000, Direction.COUNTERCLOCKWISE)
+		self.back_forever(1000, Direction.COUNTERCLOCKWISE)
+		wait(500)
+		self.front_dog_gear.brake()
+		self.back_dog_gear.brake()
+		# :)
+
 	def reset_elevator(self):
 		self.front_dog_gear.run_until_stalled(-10000, Stop.COAST)
 

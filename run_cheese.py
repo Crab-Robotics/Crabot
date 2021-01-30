@@ -18,9 +18,7 @@ import CrabRobotLibrary
 
 def run_table(crabot):
 	crabot.gyro_reset()
-	# todo: create front_and_back_reset function to reduce time
-	crabot.back_reset(Direction.COUNTERCLOCKWISE)
-	crabot.front_reset(Direction.COUNTERCLOCKWISE)
+	crabot.reset_attachments()
 		
 	# todo: lower the front medium motor so its down
 
