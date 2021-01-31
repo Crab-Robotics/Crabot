@@ -7,8 +7,8 @@
 
 **Run Cheese**
  - [x] Fix 2nd slide person - _Greyden_
- - [ ] Try to make yellow cube more consistent - _Richard_
- - [ ] Prevent stall on boccia ball attachment
+ - [x] Try to make yellow cube more consistent - _Richard_
+ - [x] Prevent stall on boccia ball attachment
 
 **Run Basketball**
  - [x] Remove gyro resets - _Kate_
