@@ -4,6 +4,7 @@
  - [ ] Speed up run_treadmill - _Greyden_
  - [x] Remove the handbrake turn ಥ_ಥ - _Adam_
  - [ ] Test using LEGO tooth pieces to hold on to the rowing machine
+ - [ ] Add an `if statement` to see if you want to do the row machine or not
 
 **Run Cheese**
  - [x] Fix 2nd slide person - _Greyden_
@@ -24,3 +25,4 @@
  - [ ] Review run cube
  - [ ] Find out how to make supports for the boccia ball
  - [ ] Load photo of wing to Configuration Management folder
+ - [ ] MORE CODE COMMENTS - _Richard_
