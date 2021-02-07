@@ -11,6 +11,7 @@ import CrabRobotLibrary
 
 def run_table_1(crabot):
 	#This pushes the innovation project out(M01).
+	crabot.gyro_reset()
 	crabot.bw_gyro_drive(-120, 0, -80)
 	crabot.brake()
 	crabot.gyro_reset()
@@ -39,11 +40,11 @@ def run_table_2(crabot):
 
 	crabot.gyro_drive(300,-45,100)
 	crabot.front_activate(10000, 11440, Direction.CLOCKWISE)
-	crabot.front_activate(10000, 1490, Direction.COUNTERCLOCKWISE)
 
 	#This code knocks over the bench and returns home(M04).
 	
 	crabot.front_forever(10000, Direction.COUNTERCLOCKWISE)
+	wait(1000)
 	crabot.bw_gyro_drive(-500,-45,-435)
 	crabot.gyro_turn(-75, Direction.COUNTERCLOCKWISE)
 	crabot.gyro_drive(1000, -75, 1350)
