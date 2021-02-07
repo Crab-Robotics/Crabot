@@ -16,7 +16,7 @@ def run_table_3(crabot):
     crabot.gyro_turn(50, Direction.CLOCKWISE)
     crabot.gyro_drive(10000, 50, 1650)
     crabot.brake()
-    #pushes down cubes
+    #Dumps out the cubes
     crabot.gyro_reset()
     crabot.front_activate(10000, 3600, Direction.CLOCKWISE)
     #comes back to home
