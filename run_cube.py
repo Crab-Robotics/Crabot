@@ -10,7 +10,7 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
 
 def run_table_3(crabot):
-    #drives to the big boccia ball
+    #drives to the big boccia ball area
     crabot.gyro_reset()
     crabot.gyro_drive(500, 0, 130)
     crabot.gyro_turn(50, Direction.CLOCKWISE)
