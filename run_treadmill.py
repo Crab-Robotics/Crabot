@@ -20,9 +20,9 @@ def go_there(crabot):
 def treadmill(crabot):
 	print("time to get those steps in!")
 	crabot.gyro_reset()
-	crabot.gyro_drive(200, 0, 210)
+	crabot.gyro_drive(200, 0, 190)
 	crabot.gyro_turn(85, Direction.CLOCKWISE)
-	crabot.gyro_drive(500, 90, 370)
+	crabot.gyro_drive(500, 90, 340)
 	while crabot.gyro.angle() > 90:
 		crabot.left_wheel.run(-100)
 	crabot.left_wheel.stop()
