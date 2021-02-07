@@ -13,9 +13,46 @@ import run_treadmill
 import run_basketball
 import run_cube
 
+ev3 = EV3Brick()
+
+ALL_CONFIG = [
+	{
+		"light_sensor_white": 50
+	},
+	{
+		"light_sensor_white": 70
+	}
+]
+
+config_index = 0
+
+def print_config():
+	global config_index
+	if config_index < 0:
+		config_index = len(ALL_CONFIG) - 1
+	elif config_index >= len(ALL_CONFIG):
+		config_index = 0
+	ev3.screen.clear()
+	ev3.screen.print("Config %s" % config_index)
+
+print_config()
+
+while True:
+	b = EV3Brick.buttons.pressed()
+	if Button.UP in b:
+		config_index -= 1
+		print_config()
+	elif Button.DOWN in b:
+		config_index += 1
+		print_config()
+	elif Button.CENTER in b:
+		break
+
+config = ALL_CONFIG[config_index]
 crabot = CrabRobotLibrary.Robot("Crabot","Ubertastic")
 
 crabot.coast()
+
 while True:
 	b = EV3Brick.buttons.pressed()
 	if Button.CENTER in b:
