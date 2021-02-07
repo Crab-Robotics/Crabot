@@ -25,4 +25,4 @@
  - [ ] Review run cube
  - [ ] Find out how to make supports for the boccia ball
  - [ ] Load photo of wing to Configuration Management folder
- - [ ] MORE CODE COMMENTS - _Richard_
+ - [x] MORE CODE COMMENTS - _Richard_
