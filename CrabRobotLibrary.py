@@ -7,6 +7,7 @@ from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
+import config
 
 # Define Class Robot
 
@@ -23,10 +24,11 @@ class Robot:
 	axle_track = 120
 	robot = DriveBase(left_wheel, right_wheel, wheel_diameter, axle_track)
 
-	def __init__(self, name, mood):
+	def __init__(self, name, mood, config_index = 0):
 		# self.robot.settings(0, 0, 100, 50)
 		self.name = name
 		self.mood = mood
+		self.config = config.ALL_CONFIG[config_index]
 
 	def tell_me_about_yourself(self):
 		print("The robot's name is " + self.name + ".")
@@ -152,7 +154,7 @@ class Robot:
 		sensor = self.left_color
 		if side == "left":
 			sensor = self.left_color
-		while sensor.reflection() < 50:
+		while sensor.reflection() < self.config["light_sensor_white"]:
 			adjusted_angle =  self.gyro.angle() - heading
 			correction = adjusted_angle * -10
 			self.robot.drive(speed, correction)

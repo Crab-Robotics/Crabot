@@ -41,7 +41,7 @@ while True:
 		break
 	wait(400)
 
-crabot = CrabRobotLibrary.Robot("Crabot","Ubertastic")
+crabot = CrabRobotLibrary.Robot("Crabot","Ubertastic", config_index)
 
 crabot.coast()
 
