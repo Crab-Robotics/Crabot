@@ -40,11 +40,17 @@ while True:
 	elif Button.CENTER in b:
 		break
 	wait(400)
+ev3.screen.clear()
+ev3.screen.print("Running Uber")
 
 crabot = CrabRobotLibrary.Robot("Crabot","Ubertastic", config_index)
 
 crabot.coast()
 
+ev3.screen.print("> UP: run_basketball")
+ev3.screen.print("> RIGHT: run_cube")
+ev3.screen.print("> DOWN: run_treadmill")
+ev3.screen.print("> LEFT: run_cheese")
 while True:
 	b = EV3Brick.buttons.pressed()
 	if Button.CENTER in b:
