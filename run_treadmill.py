@@ -45,7 +45,8 @@ def row_machine(crabot):
 	crabot.gyro_turn(49, Direction.CLOCKWISE)
 	crabot.gyro_drive(200, 55, 30)
 	#pulls the row machine
-	crabot.front_activate(100, 220, Direction.CLOCKWISE)
+	crabot.front_dog_gear.run_until_stalled(100)
+	crabot.front_activate(-100, 40, Direction.CLOCKWISE)
 	crabot.front_dog_gear.brake()
 	crabot.gyro_turn(0, Direction.COUNTERCLOCKWISE)
 	#comes back
