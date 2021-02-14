@@ -10,6 +10,7 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
 
 def go_there(crabot):
+	#resets gyro and drives across the board
 	crabot.gyro_reset()
 	crabot.gyro_drive(800, 0, 2200)
 	crabot.gyro_drive_until_white(400, 0, "left")
@@ -20,12 +21,17 @@ def go_there(crabot):
 def treadmill(crabot):
 	print("time to get those steps in!")
 	crabot.gyro_reset()
+
+  #drives to the treadmill
 	crabot.gyro_drive(200, 0, 190)
 	crabot.gyro_turn(85, Direction.CLOCKWISE)
 	crabot.gyro_drive(500, 90, 340)
+  
+	#runs only the left wheel
 	while crabot.gyro.angle() > 90:
 		crabot.left_wheel.run(-100)
 	crabot.left_wheel.stop()
+	#drives off the treadmill
 	wait(100)
 	crabot.right_wheel.run_time(1000, 3000)
 	crabot.bw_gyro_drive(-1000, 90, -3000)
@@ -36,12 +42,15 @@ def row_machine(crabot):
 	crabot.gyro_reset()
 	crabot.front_reset(Direction.COUNTERCLOCKWISE)
 	# crabot.bw_gyro_drive(-20, 0, -20)
+	#drives to the row machine
 	crabot.gyro_drive(200, 0, 420)
 	crabot.gyro_turn(49, Direction.CLOCKWISE)
-	crabot.gyro_drive(200, 55, 30)
+	crabot.gyro_drive(200, 53, 27)
+	#pulls the row machine
 	crabot.front_activate(100, 220, Direction.CLOCKWISE)
 	crabot.front_dog_gear.brake()
 	crabot.gyro_turn(0, Direction.COUNTERCLOCKWISE)
+	#comes back
 	crabot.bw_gyro_drive(-200, 0, -50)
 	crabot.front_reset(Direction.COUNTERCLOCKWISE)
 	crabot.bw_gyro_drive(-450, 0, -500)

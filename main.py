@@ -17,6 +17,8 @@ import Caleb_Skills_Library
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
 
+# Welcome to our repo! Here you will see all of our code for our robot, Crabot.
+
 Crabot = CrabRobotLibrary.Robot("Crabot","Happy")
 Crabot.tell_me_about_yourself()
 

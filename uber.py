@@ -24,26 +24,26 @@ while True:
 		crabot.coast()
 		wait(2000)
 	elif Button.LEFT in b:
-		# M02, M06, M07, M08 (yellow block)
+		# M02, M06, M07, M08 (yellow block) - run_cheese
 		print("Running run_cheese.")
 		run_cheese.run_table(crabot)
 		crabot.coast()
 		wait(2000)
 	elif Button.RIGHT in b:
-		# M08 (All other cubes)
+		# M08 (All other cubes) - run_cube
 		print("Running run_cube.")
 		run_cube.run_table_3(crabot)
 		crabot.coast()
 		wait(2000)
 	elif Button.UP in b:
-		#M01, M04, M05, M08 (red or blue blocks)
+		#M01, M04, M05, M08 (red or blue blocks) -  run_basketball
 		print("Running run_basketball.")
 		run_basketball.run_table_1(crabot)
 		run_basketball.run_table_2(crabot)
 		crabot.coast()
 		wait(2000)
 	elif Button.DOWN in b:
-		# M11, M12
+		# M11, M12 - run_treadmill
 		print("Running run_treadmill.")
 		run_treadmill.go_there(crabot)
 		run_treadmill.row_machine(crabot)
