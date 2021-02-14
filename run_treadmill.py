@@ -22,9 +22,9 @@ def treadmill(crabot):
 	print("time to get those steps in!")
 	crabot.gyro_reset()
 	#drives to the treadmill
-	crabot.gyro_drive(200, 0, 190) # TODO: 210 works better on some tables
+	crabot.gyro_drive(200, 0, 210) # TODO: 210 works better on some tables
 	crabot.gyro_turn(85, Direction.CLOCKWISE)
-	crabot.gyro_drive(500, 90, 340) # 370 works better on some tables
+	crabot.gyro_drive(500, 90, 350) # 370 works better on some tables
 	#runs only the left wheel
 	while crabot.gyro.angle() > 90:
 		crabot.left_wheel.run(-100)
@@ -42,8 +42,8 @@ def row_machine(crabot):
 	# crabot.bw_gyro_drive(-20, 0, -20)
 	#drives to the row machine
 	crabot.gyro_drive(200, 0, 420)
-	crabot.gyro_turn(49, Direction.CLOCKWISE)
-	crabot.gyro_drive(200, 53, 27)
+	crabot.gyro_turn(48, Direction.CLOCKWISE)
+	crabot.gyro_drive(200, 51, 10)
 	#pulls the row machine
 	crabot.front_activate(100, 220, Direction.CLOCKWISE)
 	crabot.front_dog_gear.brake()
