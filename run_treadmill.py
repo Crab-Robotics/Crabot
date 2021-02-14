@@ -21,12 +21,10 @@ def go_there(crabot):
 def treadmill(crabot):
 	print("time to get those steps in!")
 	crabot.gyro_reset()
-
-  #drives to the treadmill
-	crabot.gyro_drive(200, 0, 190)
+	#drives to the treadmill
+	crabot.gyro_drive(200, 0, 190) # TODO: 210 works better on some tables
 	crabot.gyro_turn(85, Direction.CLOCKWISE)
-	crabot.gyro_drive(500, 90, 340)
-  
+	crabot.gyro_drive(500, 90, 340) # 370 works better on some tables
 	#runs only the left wheel
 	while crabot.gyro.angle() > 90:
 		crabot.left_wheel.run(-100)
