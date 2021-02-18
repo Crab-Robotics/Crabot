@@ -9,6 +9,16 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
 
+# This program completes the treadmill and the row machine. (Fun fact: this is
+# the only run that doesn't do the boccia ball mission.)
+#
+# How to Use This Function
+# -----
+# Use the large jig to line up the robot 
+# 1. Place the jig against the south wall.
+# 2. Leave 4.25000 squares east of the jig.
+# 3. Place the robot with the wheel against the llama piece.
+
 def go_there(crabot):
 	#resets gyro and drives across the board
 	crabot.gyro_reset()

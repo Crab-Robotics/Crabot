@@ -9,6 +9,14 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
 
+# This program completes the boccia ball.
+#
+# How to Use This Function
+# -----
+# Use the small jig to line up the robot 
+# 1. Place the jig against the south wall.
+# 2. Place the robot facing north with its back against the jig.
+
 def run_table_3(crabot):
     #drives to the big boccia ball area
     crabot.gyro_reset()
