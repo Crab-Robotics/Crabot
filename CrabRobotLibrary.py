@@ -9,6 +9,8 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
 # Define Class Robot
+# This class defines all of the functions and variables needed to run
+# the robot. We use this class in other programs.
 
 class Robot:
 	brick = EV3Brick()
@@ -35,12 +37,14 @@ class Robot:
 		print("Axle Track is", self.axle_track, ".")
 		print()
 	
+	# This function makes sure all of the motors spin freely.
 	def coast(self):
 		self.front_dog_gear.stop()
 		self.back_dog_gear.stop()
 		self.left_wheel.stop()
 		self.right_wheel.stop()
 	
+	# This function activates the front attachment.
 	def front_activate(self, speed, rotation_angle, direction = Direction.CLOCKWISE):
 		print("Activating front motor")
 		if direction == Direction.CLOCKWISE:
@@ -48,25 +52,29 @@ class Robot:
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.front_dog_gear.run_angle(-speed, rotation_angle)
 	
+	# This function resets the front attachment.
 	def front_reset(self, direction = Direction.CLOCKWISE):
 		if direction == Direction.CLOCKWISE:
 			self.front_dog_gear.run_time(500, 1000)
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.front_dog_gear.run_time(-500, 1000)
 
+	# This function makes the front attachment activate forever.
 	def front_forever(self, speed, direction = Direction.CLOCKWISE):
 		print("Activating front motor")
 		if direction == Direction.CLOCKWISE:
 			self.front_dog_gear.run(speed)
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.front_dog_gear.run(-speed)
-		
+	
+	# This function resets the back attachment.
 	def back_reset(self, direction = Direction.CLOCKWISE):
 		if direction == Direction.CLOCKWISE:
 			self.back_dog_gear.run_time(500, 1000)
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.back_dog_gear.run_time(-500, 1000)
 
+	# This function activates the back attachment.
 	def back_activate(self, speed, rotation_angle, direction = Direction.CLOCKWISE):
 		print("Activating back motor")
 		if direction == Direction.CLOCKWISE:
@@ -74,17 +82,20 @@ class Robot:
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.back_dog_gear.run_angle(-speed, rotation_angle)
 
+	# This function makes the back attachment activate forever.
 	def back_forever(self, speed, direction = Direction.CLOCKWISE):
 		print("Activating back motor")
 		if direction == Direction.CLOCKWISE:
 			self.back_dog_gear.run(speed)
 		elif direction == Direction.COUNTERCLOCKWISE:
 			self.back_dog_gear.run(-speed)
-		
+	
+	# This function locks the back attachment.
 	def back_brake(self):
 		print("Stopping back motor")
 		self.back_dog_gear.brake()
 
+	# This function resets both attachments at the same time.
 	def reset_attachments(self):
 		print("Resetting attachments")
 		self.front_forever(1000, Direction.COUNTERCLOCKWISE)
@@ -92,29 +103,37 @@ class Robot:
 		wait(500)
 		self.front_dog_gear.brake()
 		self.back_dog_gear.brake()
-		# :)
 
+	# This function automatically resets the elevator attachment
+	# (because we are too lazy to do it ourselves by hand).
 	def reset_elevator(self):
 		self.front_dog_gear.run_until_stalled(-10000, Stop.COAST)
 
+	# This function makes the robot drive straight without using
+	# the gyro.
 	def move_forward(self, distance_mm):
 		print("Move forward", distance_mm, ".")
 		self.robot.straight(-distance_mm)
-	  
+
+	# This function turns the robot without using the gyro.
 	def turn(self, angle):
 		print("Turn", angle, "degrees.")
 		self.robot.turn(angle)
 
+	# This function locks the wheels.
 	def brake(self):
 		self.left_wheel.brake()
 		self.right_wheel.brake()
 
+	# This function resets the gyro's angle value to 0.
 	def gyro_reset(self):
 		self.gyro.reset_angle(0)
 		while self.gyro.angle() != 0:
 			self.gyro.reset_angle(0)
 			wait(50)
 
+	# This function causes the robot to turn until the gyro reads a
+	# certain angle.
 	def gyro_turn(self, degrees, direction):
 		print("start: " + str(self.gyro.angle()))
 		self.robot.stop()
@@ -134,6 +153,8 @@ class Robot:
 		self.right_wheel.stop(Stop.BRAKE)
 		print("stop:  " + str(self.gyro.angle()))
 
+	# This function makes the robot drive straight using the gyro
+	# sensor for a given distance.
 	def gyro_drive(self, speed, heading, distance):
 		self.robot.stop()
 		self.robot.reset()
@@ -146,6 +167,8 @@ class Robot:
 			actual_distance = self.robot.distance()
 		self.robot.stop()
 
+	# This function makes the robot drive straight using the gyro
+	# sensor until the color sensor detects white.
 	def gyro_drive_until_white(self, speed, heading, side):
 		self.robot.stop()
 		self.robot.reset()
@@ -158,6 +181,8 @@ class Robot:
 			self.robot.drive(speed, correction)
 		self.robot.stop()
 
+	# This function makes the robot drive backwards using the gyro
+	# sensor for a given distance.
 	def bw_gyro_drive(self, speed, heading, distance):
 		self.robot.stop()
 		self.robot.reset()
@@ -170,6 +195,7 @@ class Robot:
 			actual_distance = self.robot.distance()
 		self.robot.stop()
 
+	# This function beeps.
 	def beep(self, number_of_beeps):
 		print("Beep",number_of_beeps,"times.")
 		x = 1
@@ -178,6 +204,8 @@ class Robot:
 			wait(30)
 			x = x + 1
 
+	# This function makes the robot drive backwards without using the
+	# gyro sensor.
 	def move_backwards(self, distance_mm):
 		print("Move backwards",distance_mm,".")
 		self.robot.straight(distance_mm)
