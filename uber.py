@@ -2,7 +2,7 @@
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
-								 InfraredSensor, UltrasonicSensor, GyroSensor)
+                                 InfraredSensor, UltrasonicSensor, GyroSensor)
 from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
@@ -12,6 +12,16 @@ import run_cheese
 import run_treadmill
 import run_basketball
 import run_cube
+
+# This program is our main control loop. It starts an infinite loop (that means
+# it runs forever) that waits for a button press. Then, depending on which button
+# is pressed, it runs a different program.
+# -----
+# UP: run_basketball
+# RIGHT: run_cube
+# DOWN: run_treadmill
+# LEFT: run_cheese
+# CENTER: reset_elevator
 
 crabot = CrabRobotLibrary.Robot("Crabot","Ubertastic")
 
@@ -52,5 +62,3 @@ while True:
 		wait(2000)
 	else:
 		wait(10)
-
-#hewo

@@ -2,12 +2,21 @@
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
-								 InfraredSensor, UltrasonicSensor, GyroSensor)
+                                 InfraredSensor, UltrasonicSensor, GyroSensor)
 from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
+
+# This program completes the basketball, the bench, the innovation
+# project, and the boccia ball.
+#
+# How to Use This Function
+# -----
+# Use the small jig to line up the robot 
+# 1. Place the jig against the south wall.
+# 2. Place the robot facing north with its back against the jig.
 
 def run_table_1(crabot):
 	#This pushes the innovation project out(M01).
@@ -29,7 +38,8 @@ def run_table_1(crabot):
 	crabot.gyro_drive(500, -45, 390)
 def run_table_2(crabot):
 
-	#this code does the first level of the basketball and lifts the red cube(M05,M08).
+	#this code does the first level of the basketball and lifts the red
+	# cube(M05,M08).
 
 	crabot.front_activate(10000, 5766, Direction.CLOCKWISE)
 	crabot.front_activate(10000, 1800, Direction.COUNTERCLOCKWISE)

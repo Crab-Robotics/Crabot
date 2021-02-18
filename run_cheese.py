@@ -9,18 +9,22 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 import CrabRobotLibrary
 
+# This program has nothing to do with cheese (except for the yellow cube).
+# It completes the step counter, the pull-up bar, MORE boccia ball, the slide,
+# and the dance floor.
+#
 # How to Use This Function
 # -----
-# Use the small jig to line up the robot 
+# Use the large jig to line up the robot 
 # 1. Place the jig against the south wall.
 # 2. Leave 4.25000 squares east of the jig.
-# 3. Place the robot with the wheel against the llama piece.
+# 3. Place the robot with the wheel against the beam that flips.
 
 def run_table(crabot):
 	crabot.gyro_reset()
 	crabot.reset_attachments()
 		
-	# todo: lower the front medium motor so its down
+	# lower the front medium motor so its down
 
 	crabot.front_activate(200, 195, Direction.CLOCKWISE)
 	crabot.gyro_drive(350, 0, 1180)
@@ -29,7 +33,7 @@ def run_table(crabot):
 	crabot.gyro_turn(-90, -90)
 	crabot.gyro_reset()
 
-	#back into wall and reset
+	# back into wall and reset
 
 	crabot.bw_gyro_drive(-120, 0, -80)
 	crabot.gyro_reset()
@@ -74,6 +78,7 @@ def run_table(crabot):
 		wait(200)
 		crabot.front_activate(-100, -100, Direction.COUNTERCLOCKWISE)
 		crabot.front_activate(100, 100, Direction.CLOCKWISE)
+
 if __name__ == '__main__':
 	crabot = CrabRobotLibrary.Robot("Crabot","Competitive")
 	run_table(crabot)
