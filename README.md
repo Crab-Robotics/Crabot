@@ -4,7 +4,7 @@ We are a [FIRST Lego League](https://www.firstlegoleague.org/) team, and this is
 
 ## Features
 
-Our main program is called [`uber.py`](https://github.com/Crab-Robotics/Crabot/blob/master/uber.py), and we use it to run all of the missions we complete as part of the challenge. The program runs It starts an infinite loop (that means it runs forever) that waits for a button press. Then, depending on which button is pressed, it runs a different program. The programs it runs are:
+Our main program is called [`uber.py`](https://github.com/Crab-Robotics/Crabot/blob/master/uber.py), and we use it to run all of the missions we complete as part of the challenge. The program starts an infinite loop (that means it runs forever) that waits for a button press. Then, depending on which button is pressed, it runs a different program. The programs it runs are:
 
 - **UP**: [`run_basketball.py`](https://github.com/Crab-Robotics/Crabot/blob/master/run_basketball.py)
 - **RIGHT**: [`run_cube.py`](https://github.com/Crab-Robotics/Crabot/blob/master/run_cube.py)
