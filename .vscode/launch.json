@@ -75,6 +75,13 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/run_cube.py",
 			"interactiveTerminal": false
+		},
+		{
+			"name": "Fall",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/fall.py",
+			"interactiveTerminal": false
 		}
 	]
 }

@@ -195,6 +195,20 @@ class Robot:
 			actual_distance = self.robot.distance()
 		self.robot.stop()
 
+	# This function checks to see if the robot is right-side-up. 
+	# If not, it will beep and complain.
+	# But, it can only tell if it falls to the left or right,
+	# it can't tell if it has fallen forward or backward.
+	def fall_check(self):
+		fall_gyro = GyroSensor(Port.S4, Direction.CLOCKWISE)
+		while True:
+			real_angle = fall_gyro.angle()
+			if real_angle > 45 or real_angle < -45:
+				self.brick.speaker.beep()
+			else:
+				wait(30)
+			print(real_angle)
+
 	# This function beeps.
 	def beep(self, number_of_beeps):
 		print("Beep",number_of_beeps,"times.")
